@@ -1,0 +1,9 @@
+{
+	"name": "adf-neu-002",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "be620324-b79d-48d3-9bbc-5bc158bcaa0b",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
