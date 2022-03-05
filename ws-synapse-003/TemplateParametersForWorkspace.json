@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "ws-synapse-003"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"ES5_OData_password": {
+			"value": ""
+		},
+		"ws-synapse-003-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"ES5_OData_properties_typeProperties_url": {
+			"value": "https://sapes5.sapdevcenter.com/sap/opu/odata/sap/SEPMRA_SO_MAN"
+		},
+		"ES5_OData_properties_typeProperties_userName": {
+			"value": "S0019127207"
+		},
+		"ws-synapse-003-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dlakestoyiertayl001.dfs.core.windows.net"
+		}
+	}
+}
