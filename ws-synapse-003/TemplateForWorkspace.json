@@ -422,7 +422,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "7",
 						"spark.dynamicAllocation.maxExecutors": "7",
-						"spark.autotune.trackingId": "09af11b6-5e6d-4f0c-aeaa-4d5e6cbe2a80"
+						"spark.autotune.trackingId": "cff94985-97f9-45a8-8940-5aee2c3168b4"
 					}
 				},
 				"metadata": {
@@ -447,13 +447,15 @@
 						"sparkVersion": "3.1",
 						"nodeCount": 10,
 						"cores": 4,
-						"memory": 28
+						"memory": 28,
+						"automaticScaleJobs": false
 					},
 					"sessionKeepAliveTimeout": 35
 				},
 				"cells": [
 					{
 						"cell_type": "code",
+						"metadata": {},
 						"source": [
 							"new_rows = [('CA',22, 45000),(\"WA\",35,65000) ,(\"WA\",50,85000)]\r\n",
 							"demo_df = spark.createDataFrame(new_rows, ['state', 'age', 'salary'])\r\n",
@@ -538,7 +540,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "b1a7de22-500a-4158-b8e0-34324bf79ced"
+						"spark.autotune.trackingId": "1a845a0c-c1ac-42b3-95c8-24d8410a38fd"
 					}
 				},
 				"metadata": {
@@ -571,14 +573,19 @@
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
+						"metadata": {
+							"microsoft": {
+								"language": "python"
+							},
+							"collapsed": false
+						},
 						"source": [
 							"%%pyspark\r\n",
 							"df = spark.read.load('abfss://dlakestoyiertayl001@dlakestoyiertayl001.dfs.core.windows.net/SEPMRA_C_SalesOrderCustomer/data_71b7c329-a3c9-453c-8848-ae078ec9e96c_c658ae8c-6573-41e5-b479-bef63e2b5db5.parquet', format='parquet')\r\n",
-							"display(df.limit(10))"
+							"display(df.limit(5))"
 						],
 						"outputs": [],
-						"execution_count": null
+						"execution_count": 4
 					}
 				]
 			},
