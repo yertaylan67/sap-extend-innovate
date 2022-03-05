@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "64e1bc49-5c18-4cba-a393-6aba72ba82c0"
+				"spark.autotune.trackingId": "83e8c1db-96d7-4528-9643-fa00c232d9f9"
 			}
 		},
 		"metadata": {
@@ -50,12 +50,18 @@
 		"cells": [
 			{
 				"cell_type": "code",
+				"metadata": {
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
 				"source": [
 					"%%pyspark\r\n",
 					"df = spark.read.load('abfss://dlakestoyiertayl001@dlakestoyiertayl001.dfs.core.windows.net/SEPMRA_C_SalesOrderCustomer/data_71b7c329-a3c9-453c-8848-ae078ec9e96c_c658ae8c-6573-41e5-b479-bef63e2b5db5.parquet', format='parquet')\r\n",
-					"display(df.limit(10))"
+					"display(df.limit(5))"
 				],
-				"execution_count": null
+				"execution_count": 4
 			}
 		]
 	}
