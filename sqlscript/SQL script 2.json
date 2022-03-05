@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://dlakestoyiertayl001.dfs.core.windows.net/dlakestoyiertayl001/SEPMRA_C_SalesOrder/data_caf5af15-b20d-4a10-8880-0a9dfe5cd2c0_c89ed8de-a5fe-4294-9b09-592f6d65a337.parquet',\n        FORMAT = 'PARQUET'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

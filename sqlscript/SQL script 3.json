@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 3",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://dlakestoyiertayl001.dfs.core.windows.net/dlakestoyiertayl001/SEPMRA_C_SalesOrderCustomer/data_71b7c329-a3c9-453c-8848-ae078ec9e96c_c658ae8c-6573-41e5-b479-bef63e2b5db5.parquet',\n        FORMAT = 'PARQUET'\n    ) AS [result]\nWHERE CompanyName = 'SAP'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
